@@ -23,5 +23,5 @@ int gcd(int a, int b) {
 
 int main() {
   cin >> a>>b;
-  cout << gcd(max(a,b),min(a,b));
+  cout << "GCD: " << gcd(max(a,b),min(a,b));
 }
