@@ -15,13 +15,10 @@ using namespace std;
 int a,b,q,r;
 
 int gcd(int a, int b) {
-  // a=qb+r where gcd(a,b)=gcd(b,r)
-  q = a/b;
-  r = a%b;
-  if (r==0) return b; // get previous remainder
-  a = b; b = r; // update
-  // cout << a << " " << b << "\n";
-  gcd(a,b);
+  if (b==0) return a; // gcd(a,0)=a
+  // cout << b << " " << a%b << "\n";
+  r = gcd(b,a%b); // last non-0 remainder is gcd
+  return r;
 }
 
 int main() {
