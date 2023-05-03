@@ -12,16 +12,14 @@
 #include <iostream>
 using namespace std;
 
-int a,b,q,r;
-
 int gcd(int a, int b) {
   if (b==0) return a; // gcd(a,0)=a
   // cout << b << " " << a%b << "\n";
-  r = gcd(b,a%b); // last non-0 remainder is gcd
+  int r = gcd(b,a%b); // last non-0 remainder is gcd
   return r;
 }
 
 int main() {
-  cin >> a>>b;
+  int a,b; cin >> a>>b;
   cout << "GCD: " << gcd(max(a,b),min(a,b));
 }
