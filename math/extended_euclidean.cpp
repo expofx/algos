@@ -47,11 +47,11 @@ int modular_inverse(int a, int m) {
   return x<0 ? x+m : x; // make positive mod
 }
 
-// TODO: solving linear congruence equation; linear diophantine equation; chinese remainder theorem
+// TODO: solving linear congruence equation; linear diophantine equation
 
-int main() {
-  int a,b,x,y; cin >> a>>b;
-  int gcd = extended_gcd(a,b,x,y);
-  cout << "Bezout's: " << a << "*" << x << " + " << b << "*" << y << " = " << gcd << "\n";
-  cout << "General solution: ("<<x<<"-"<<b/gcd<<"k, "<<y<<"+"<<a/gcd<<"k)";
-}
+// int main() {
+//   int a,b,x,y; cin >> a>>b;
+//   int gcd = extended_gcd(a,b,x,y);
+//   cout << "Bezout's: " << a << "*" << x << " + " << b << "*" << y << " = " << gcd << "\n";
+//   cout << "General solution: ("<<x<<"-"<<b/gcd<<"k, "<<y<<"+"<<a/gcd<<"k)";
+// }
